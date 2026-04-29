@@ -16,7 +16,7 @@ async function status(request, response) {
     databaseOpenedConnectionsResult.rows[0].count;
 
   const databaseMaxConnectionsResult = await database.query(
-    "SHOW max_connections;"
+    "SHOW max_connections;",
   );
   const databaseMaxConnectionsValue =
     databaseMaxConnectionsResult.rows[0].max_connections;
